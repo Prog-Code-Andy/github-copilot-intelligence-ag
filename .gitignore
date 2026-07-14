@@ -1,0 +1,227 @@
+# .gitignore — Professional, opinionated
+# Generated to ignore common OS files, editors, language-specific build artifacts,
+# dependencies, credentials, and temporary files. Review and adjust for your project.
+
+# ========================
+# Operating system files
+# ========================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# ========================
+# Logs and runtime files
+# ========================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.pid
+*.seed
+*.pid.lock
+
+# Temporary and swap files
+*.swp
+*.swo
+.*.swp
+.*.swo
+*.tmp
+*.temp
+
+# ========================
+# Node
+# ========================
+node_modules/
+# build output
+dist/
+build/
+lib/
+# coverage
+coverage/
+.nyc_output/
+# cache
+.cache/
+.pnp.cjs
+.pnp.js
+
+# Optional npm/yarn/pnpm caches (uncomment if desired)
+# .npm/
+# .yarn/
+# .pnpm-store/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Lockfiles: generally commit lockfiles for apps; ignore if your workflow requires it
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# ========================
+# Python
+# ========================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtualenvs
+venv/
+ENV/
+.env/
+.venv/
+venv.bak/
+
+# Pytest cache
+.pytest_cache/
+
+# pip
+pip-wheel-metadata/
+
+# ========================
+# Java
+# ========================
+# Compiled class files
+*.class
+
+# Package Files
+*.jar
+*.war
+*.ear
+
+# Maven
+target/
+
+# Gradle
+.gradle/
+build/
+
+# ========================
+# Go
+# ========================
+# Binaries for programs and plugins
+bin/
+# Build output
+pkg/
+
+# ========================
+# Rust
+# ========================
+target/
+**/*.rs.bk
+
+# ========================
+# Databases
+# ========================
+*.sqlite3
+*.db
+*.db-journal
+*.sql
+.docker/
+
+# ========================
+# IDEs / editors
+# ========================
+# VS Code
+.vscode/
+
+# JetBrains (IntelliJ, WebStorm, PyCharm, etc.)
+.idea/
+*.iml
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Emacs
+*~
+# Vim
+*.swp
+
+# ========================
+# Docker
+# ========================
+# Ignore default Docker secrets and compose override that often contain local config
+docker-compose.override.yml
+.docker/
+# Docker build output
+**/Dockerfile.*.local
+
+# ========================
+# Kubernetes
+# ========================
+# local cluster files
+.kube/
+
+# ========================
+# CI/CD
+# ========================
+# workflow run artifacts
+.github/workflows/*.local
+
+# ========================
+# GitHub
+# ========================
+.github/
+
+# ========================
+# Secrets and keys
+# ========================
+# Private keys and credential files
+*.pem
+*.key
+*.p12
+*.jks
+*.crt
+*.der
+*.csr
+secrets/
+credentials/
+
+# ========================
+# Archives and packages
+# ========================
+*.zip
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# ========================
+# Misc
+# ========================
+# generated files
+*.log
+*.out
+
+# keep this file tracked; add project-specific ignores below
+
+# === Project-specific overrides ===
+# Add any project-specific ignore patterns below this line
+
+# ========================
+# Templates and temporary files
+# ========================
+docs/temp-meta-prompts-projects-v.1/temp-files-skills
