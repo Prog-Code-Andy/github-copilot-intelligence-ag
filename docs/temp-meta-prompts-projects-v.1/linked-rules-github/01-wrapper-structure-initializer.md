@@ -1,4 +1,25 @@
-# Repository Structure Meta-Prompt
+# Wrapper Structure Initializer
+
+## Position in pipeline
+
+```text
+Step 1 of 3 — Wrapper Structure Initializer   ◄── you are here
+Step 2 of 3 — Universal Meta-Prompt Builder       (02-universal-meta-prompt-builder.md)
+Step 3 of 3 — Build-Linking Compiler              (03-build-linking-compiler.md)
+```
+
+This file always runs **first**. Its only job is to guarantee that the base
+`.github` skeleton and root governance files exist before any agent,
+instruction, prompt, skill, hook, or workflow is generated.
+
+- **Input:** the current repository state (may be empty, partially set up, or already initialized).
+- **Output:** the base directory structure and governance files listed below.
+- **Hands off to:** [`02-universal-meta-prompt-builder.md`](./02-universal-meta-prompt-builder.md), which performs discovery again at a deeper level (per-file, per-component) and then generates the requested capability package. Step 2 assumes this step has already run, but it must not fail silently if a directory is still missing — it should re-run the relevant check from this file before proceeding.
+- **Does not** create agents, instructions, prompts, skills, hooks, or workflow implementation files. That responsibility belongs entirely to Step 2. This file creates structure only.
+
+Source of this file: adapted from `main-meta-prompts/create-repo-structure.md`, kept behaviorally identical, with pipeline framing added.
+
+---
 
 ## Role
 
@@ -599,3 +620,11 @@ Use this prompt in Plan mode first, so Copilot inspects the existing repository 
 The `.gitkeep` files are necessary because Git does not store empty directories. They do not implement agents, skills, hooks, workflows, or prompts; they only preserve the planned structure.
 
 `AGENTS.md` is recognized by VS Code out of the box (`chat.useAgentsMdFile`) and is intended to hold the single, agent-agnostic rule set shared across AI coding agents. Nested `AGENTS.md` files per subfolder are an experimental, opt-in capability (`chat.useNestedAgentsMdFiles`) and are out of scope for this initial setup task.
+
+---
+
+## Next step
+
+Once this structure exists (or is confirmed already present), proceed to
+[`02-universal-meta-prompt-builder.md`](./02-universal-meta-prompt-builder.md)
+to generate the requested agent, instructions, prompts, skills, or hooks.
