@@ -224,4 +224,5 @@ credentials/
 # ========================
 # Templates and temporary files
 # ========================
-docs/temp-meta-prompts-projects-v.1/temp-files-skills
+
+docs/temp-meta-prompts-projects-v.1/lego-files-builder
